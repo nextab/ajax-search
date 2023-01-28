@@ -1,0 +1,82 @@
+$bg: #f9f9f9 !default;
+$selects: #EEEEEE !default;
+$text: #000 !default; 
+$arrow: #666 !default;
+$padding: 1.5rem !default;
+$label-weight: 700 !default;
+$label-size: .9rem !default;
+$fi-padding: 70%;
+
+/* #region Custom Crap */
+.nxt_afp_posts {
+	.et_pb_button {
+		background-color: #F19F00;
+	}
+}
+/* #endregion Custom Crap */
+
+/* #region Filter */
+.nxt_afp_filter_container {
+	background-color: $bg;
+	margin-bottom: 2rem;
+	padding: $padding;
+	.select-holder {
+		@extend %magic_select;
+	}
+}
+.nxt_afp_filter_form {
+	display: grid;
+	gap: 1rem;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	label {
+		font-size: $label-size;
+		font-weight: $label-weight;
+	}
+}
+/* #endregion Filter */
+
+/* #region Posts Feed */
+.nxt_afp_posts {
+	display: grid;
+	gap: 1rem;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	> article {
+		max-width: 440px;
+	}
+}
+.featured-image-container {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding-top: $fi-padding;
+}
+/* #endregion Posts Feed */
+
+/* #region Forms & Selects */
+%magic_select {
+	position: relative;
+	background: $selects;
+	&::before {
+		color: $arrow;
+		content: "C";
+		font-family: 'EtModules';
+		pointer-events: none;
+		position: absolute;
+		right: 7px;
+		top: 8px;
+		z-index: 10;
+	}
+	select {
+		-webkit-appearance: none;
+		appearance: none;
+		border: none;
+		cursor: pointer;
+		font-size: 1rem;
+		outline: none;
+		padding: .75rem .5rem;
+		position: relative;
+		width: 100%;
+	}
+}

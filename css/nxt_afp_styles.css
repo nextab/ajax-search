@@ -1,0 +1,69 @@
+/* #region Custom Crap */
+.nxt_afp_posts .et_pb_button {
+  background-color: #F19F00;
+}
+
+/* #endregion Custom Crap */
+/* #region Filter */
+.nxt_afp_filter_container {
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+.nxt_afp_filter_form {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.nxt_afp_filter_form label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* #endregion Filter */
+/* #region Posts Feed */
+.nxt_afp_posts {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.nxt_afp_posts > article {
+  max-width: 440px;
+}
+
+.featured-image-container {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-top: 70%;
+}
+
+/* #endregion Posts Feed */
+/* #region Forms & Selects */
+.nxt_afp_filter_container .select-holder {
+  position: relative;
+  background: #EEEEEE;
+}
+.nxt_afp_filter_container .select-holder::before {
+  color: #666;
+  content: "C";
+  font-family: "EtModules";
+  pointer-events: none;
+  position: absolute;
+  right: 7px;
+  top: 8px;
+  z-index: 10;
+}
+.nxt_afp_filter_container .select-holder select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.75rem 0.5rem;
+  position: relative;
+  width: 100%;
+}
